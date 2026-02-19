@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fitness/features/core/error/exception.dart';
-import 'package:fitness/features/core/utlis/back_end_points.dart';
+import 'package:fitness/core/error/exception.dart';
+import 'package:fitness/core/utlis/back_end_points.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
 class FirebaseAuthServices {

@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:fitness/features/core/services/data_base_service.dart';
+import 'package:fitness/core/services/data_base_service.dart';
 
 class FirestoreService implements DatabaseService {
   @override
