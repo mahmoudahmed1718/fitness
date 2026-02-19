@@ -3,6 +3,8 @@ import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitness/features/core/error/exception.dart';
+import 'package:fitness/features/core/utlis/back_end_points.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
 class FirebaseAuthServices {
   Future<void> deleteUser() async {
@@ -77,23 +79,23 @@ class FirebaseAuthServices {
     }
   }
 
-  Future<User> signInWithGoogle() async {
-    // Trigger the authentication flow
-    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+  // Future<User> signInWithGoogle() async {
+  //   // Trigger the authentication flow
+  //   final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
-    // Obtain the auth details from the request
-    final GoogleSignInAuthentication? googleAuth =
-        await googleUser?.authentication;
+  //   // Obtain the auth details from the request
+  //   final GoogleSignInAuthentication? googleAuth =
+  //       await googleUser?.authentication;
 
-    // Create a new credential
-    final credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth?.accessToken,
-      idToken: googleAuth?.idToken,
-    );
+  //   // Create a new credential
+  //   final credential = GoogleAuthProvider.credential(
+  //     accessToken: googleAuth?.accessToken,
+  //     idToken: googleAuth?.idToken,
+  //   );
 
-    // Once signed in, return the UserCredential
-    return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
-  }
+  //   // Once signed in, return the UserCredential
+  //   return (await FirebaseAuth.instance.signInWithCredential(credential)).user!;
+  // }
 
   Future<User> signInWithFacebook() async {
     // Trigger the sign-in flow
@@ -115,7 +117,7 @@ class FirebaseAuthServices {
 
   Future<void> signOut() async {
     await FirebaseAuth.instance.signOut();
-    await GoogleSignIn().signOut();
+    // await GoogleSignIn().signOut();
     await FacebookAuth.instance.logOut();
   }
 
