@@ -12,7 +12,7 @@ abstract class AuthRepo {
     required String email,
     required String password,
   });
-  Future<Either<Faileur, UserEntity>> signInWithGoogle();
+  // Future<Either<Faileur, UserEntity>> signInWithGoogle();
   Future<Either<Faileur, UserEntity>> signInWithFacebook();
   Future addUserDataToFirestore({required UserEntity user});
   Future<UserEntity> getDataUser({required String userId});
