@@ -27,7 +27,6 @@ class AuthRepoImpl implements AuthRepo {
     required String email,
     required String password,
     required String name,
-    // required String name,
   }) async {
     User? user;
     try {

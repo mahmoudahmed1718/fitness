@@ -107,12 +107,6 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                   // context.read<SignInCubit>().signInWithGoogle();
                 },
               ),
-              const SizedBox(height: 16),
-              SocialLoginButton(
-                title: 'login with apple',
-                image: Assets.assetsImagesApplIcon,
-                onPressed: () {},
-              ),
             ],
           ),
         ),
