@@ -1,5 +1,4 @@
 import 'package:fitness/constant.dart';
-import 'package:fitness/core/utlis/app_colors.dart';
 import 'package:fitness/core/utlis/app_text_styles.dart';
 import 'package:fitness/core/utlis/assets.dart';
 import 'package:fitness/core/widgets/custom_button.dart';
